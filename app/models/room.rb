@@ -7,6 +7,6 @@ class Room < ActiveRecord::Base
   validates :bath_room, presence: true
   validates :listing_name, presence: true, length: {maximum: 75}
   validates :summary, presence: true, length: {maximum: 600}
-  validates :adress, presence: true
+  validates :address, presence: true
   validates :price, numericality: {only_integer: true, greather_than: 5}
 end

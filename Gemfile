@@ -28,6 +28,7 @@ gem 'rails-i18n'
 gem 'bootstrap-sass'
 gem 'paperclip'
 gem 'toastr-rails'
+gem 'font-awesome-sass'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
