@@ -1,16 +1,44 @@
-<div class="row">
-  <div class="col-md5 col-md-offset-3 text-center">
-    <h2>Modifier profil</h2>
-    
-    <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
-      <%= devise_error_messages! %>
+<div class="col-md-3">
+
+     <ul class="sidebar-list">
+
+          <li class="sidebar-item">
+
+               <%= link_to 'Modifier mon profil', edit_user_registration_path, class: 'sidebar-link active' %>
+
+          </li>
+
+     </ul>
+
+ <br>
+
+ <%= link_to 'Voir mon profil', user_path(current_user.id), class: 'btn btn-default wide' %>
+
+ </div>
+ 
+<div class="col-md-7 text-center"
+  <div class ="panel panel-default">
+    <div class="panel-heading">
+        <div class="col-md4 text-center">
+        <h2>Modifier profil</h2>
+        </div>
+    </div>
+    <div class="panel-body">
+          <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
+          <%= render 'shared/devise_errors' %>
     
       <div class="form-group">
         <%= f.email_field :email, autofocus: true, placeholder: "E-mail", class: "form-control" %>
       </div>
       
       <div class="form-group">
-        <%= f.file_field :avatar, class: "form-control" %>
+                  <span class="btn btn-default btn-file">
+
+                        Upload ma photo
+
+                        <%= f.file_field :avatar %>
+
+                   </span>
       </div>
       
       <div class="form-group">
@@ -32,20 +60,24 @@
       <div class="form-group">
         <%= f.password_field :password_confirmation, autocomplete: "off", placeholder: "Nouveau mot de passe" , class: "form-control"%>
       </div>
-    
-      <div class="form-group">
-        <%= f.password_field :current_password, autocomplete: "off", placeholder: "Mot de passe actuel" , class: "form-control" %>
-      </div>
-    
-      <div class="actions">
-        <%= f.submit "Enregistrer", class:"btn btn-primary" %>
+      
+      <div class="col-md4 text-center">
+        <div class="actions">
+          <%= f.submit "Enregistrer", class:"btn btn-primary" %>
+        </div>
       </div>
     <% end %>
-    
+    </div>
+</div>
+</div>
+<div class="container">
+  <div class="col-md8 col-md-offset-1 text-center">
+
     <h3>Supprimer mon compte</h3>
     
-    <p>Vous supprimerez définitivement votre compte <%= button_to "Supprimer mon compte", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete %></p>
+    <p>Vous supprimerez définitivement votre compte <%= button_to "Supprimer mon compte", registration_path(resource_name), data: { confirm: "Confirmation" }, method: :delete, class: "btn btn-primary" %></p>
     </br>
-    <%= link_to "retour", :back %>
+    <%= link_to "retour", :back, class: "btn btn-primary" %>
   </div>
+</div>
 </div>
