@@ -6,54 +6,54 @@ fr:
         confirmation_token: 
         confirmed_at: 
         created_at: 
-        current_password: Mot de passe actuel
+        current_password: "Mot de passe actuel"
         current_sign_in_at: 
         current_sign_in_ip: 
-        email: Courriel
+        email: "email"
         encrypted_password: 
         failed_attempts: 
         last_sign_in_at: 
         last_sign_in_ip: 
         locked_at: 
-        password: Mot de passe
-        password_confirmation: Confirmation du mot de passe
+        password: "Mot de passe"
+        password_confirmation: "Confirmation du mot de passe"
         remember_created_at: 
-        remember_me: Se souvenir de moi
+        remember_me: "Se souvenir de moi"
         reset_password_sent_at: 
-        reset_password_token: Clé de Réinitialisation du Mot de Passe
+        reset_password_token: "Clé de Réinitialisation du Mot de Passe"
         sign_in_count: 
         unconfirmed_email: 
-        unlock_token: Clé de déblocage
+        unlock_token: "Clé de déblocage"
         updated_at: 
     models:
-      user: Utilisateur
+      user: "Utilisateur"
   devise:
     confirmations:
-      confirmed: Votre compte a été confirmé avec succès.
+      confirmed: "Votre compte a été confirmé avec succès."
       new:
-        resend_confirmation_instructions: Renvoyer les instructions de confirmation
-      send_instructions: Vous allez recevoir sous quelques minutes un courriel comportant des instructions pour confirmer votre compte.
-      send_paranoid_instructions: Si votre courriel existe sur notre base de données, vous recevrez sous quelques minutes un message avec des instructions pour confirmer votre compte.
+        resend_confirmation_instructions: "Renvoyer les instructions de confirmation"
+      send_instructions: "Vous allez recevoir sous quelques minutes un courriel comportant des instructions pour confirmer votre compte."
+      send_paranoid_instructions: "Si votre courriel existe sur notre base de données, vous recevrez sous quelques minutes un message avec des instructions pour confirmer votre compte."
     failure:
-      already_authenticated: Vous êtes déjà connecté(e).
-      inactive: Votre compte n’est pas encore activé.
-      invalid: Courriel ou mot de passe incorrect.
-      last_attempt: Il vous reste une chance avant que votre compte soit bloqué.
-      locked: Votre compte est verrouillé.
-      not_found_in_database: Courriel ou mot de passe incorrect.
-      timeout: Votre session est expirée, veuillez vous reconnecter pour continuer.
-      unauthenticated: Vous devez vous connecter ou vous enregistrer pour continuer.
-      unconfirmed: Vous devez confirmer votre compte par courriel.
+      already_authenticated: "Vous êtes déjà connecté(e)."
+      inactive: "Votre compte n’est pas encore activé."
+      invalid: "Courriel ou mot de passe incorrect."
+      last_attempt: "Il vous reste une chance avant que votre compte soit bloqué."
+      locked: "Votre compte est verrouillé."
+      not_found_in_database: "Courriel ou mot de passe incorrect."
+      timeout: "Votre session est expirée, veuillez vous reconnecter pour continuer."
+      unauthenticated: "Vous devez vous connecter ou vous enregistrer pour continuer."
+      unconfirmed: "Vous devez confirmer votre compte par courriel."
     mailer:
       confirmation_instructions:
-        action: Confirmer mon courriel
-        greeting: Bienvenue %{recipient}!
-        instruction: 'Vous pouvez confirmer votre courriel grâce au lien ci-dessous:'
-        subject: Instructions de confirmation
+        action: "Confirmer mon courriel"
+        greeting: "Bienvenue %{recipient}!"
+        instruction: "Vous pouvez confirmer votre courriel grâce au lien ci-dessous:"
+        subject: "Instructions de confirmation"
       password_change:
-        greeting: Bonjour %{recipient}!
-        message: Nous vous contactons pour vous notifier que votre mot de passe a été modifié.
-        subject: Mot de passe modifié.
+        greeting: "Bonjour %{recipient}!"
+        message: "Nous vous contactons pour vous notifier que votre mot de passe a été modifié."
+        subject: "Mot de passe modifié."
       reset_password_instructions:
         action: Changer mon mot de passe
         greeting: Bonjour %{recipient}!

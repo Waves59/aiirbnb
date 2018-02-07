@@ -9,7 +9,7 @@ fr:
         current_password: Mot de passe actuel
         current_sign_in_at: 
         current_sign_in_ip: 
-        email: Courriel
+        email: email
         encrypted_password: 
         failed_attempts: 
         last_sign_in_at: 
@@ -87,11 +87,11 @@ fr:
     registrations:
       destroyed: Au revoir ! Votre compte a été annulé avec succès. Nous espérons vous revoir bientôt.
       edit:
-        are_you_sure: "Êtes-vous sûr ?"
+        are_you_sure: Êtes-vous sûr ?
         cancel_my_account: Supprimer mon compte
         currently_waiting_confirmation_for_email: 'Confirmation en attente pour: %{email}'
         leave_blank_if_you_don_t_want_to_change_it: laissez ce champ vide pour le laisser inchangé
-        title: "Éditer %{resource}"
+        title: Éditer %{resource}
         unhappy: 'Pas content '
         update: Modifier
         we_need_your_current_password_to_confirm_your_changes: nous avons besoin de votre mot de passe actuel pour valider ces modifications
@@ -133,4 +133,4 @@ fr:
       not_locked: n’était pas verrouillé(e)
       not_saved:
         one: 'une erreur a empêché ce (cet ou cette) %{resource} d’être enregistré(e) :'
-        other: "%{count} erreurs ont empêché ce (cet ou cette) %{resource} d’être enregistré(e) :"
+        other: %{count} erreurs ont empêché ce (cet ou cette) %{resource} d’être enregistré(e) :
