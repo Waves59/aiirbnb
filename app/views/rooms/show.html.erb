@@ -51,11 +51,13 @@
                                 <%= @room.bath_room %> <%= @room.bath_room > 1 ? "Salles de bain" : "Salle de bain" %>
                             </div>
                         </div>
+                                            
                     </div>
                 </div>
             </div>
             <div class="col-md-4">
                 <!-- Formulaire de réservation -->
+                <%= render 'reservations/form' %>
             </div>    
         </div>
         
