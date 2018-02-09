@@ -1,8 +1,8 @@
 class RoomsController < ApplicationController
 
-before_action :set_room, only: [:show, :edit, :update]
-before_action :authenticate_user!, except: [:show]
-before_action :require_same_user, only: [:edit, :update]
+before_action :set_room, only: [:destroy ,:show, :edit, :update]
+before_action :authenticate_user!, except: [:home ,:show]
+before_action :require_same_user, only: [:destroy,:edit, :update]
 
 
     def index
@@ -15,6 +15,16 @@ before_action :require_same_user, only: [:edit, :update]
     
     def edit
         @photos = @room.photos
+    end
+    
+    def destroy
+        @room.photos.destroy
+        @room.destroy
+        redirect_to rooms_path, notice:"Votre logement a été retiré"
+    end
+    
+    def home
+       @rooms = Room.all 
     end
     
     

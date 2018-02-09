@@ -15,7 +15,7 @@
          <%= link_to 'Voir mon profil', user_path(current_user.id), class: 'btn btn-default wide' %>
        </li>
        <li class="button-navigate">
-         <%= link_to 'Mes annonces', user_path(current_user.id), class: 'btn btn-default wide' %>
+         <%= link_to 'Mes annonces', :controller => "rooms", :action => "index", class: 'btn btn-default wide' %>
      </li>
     </ul>
  </div>

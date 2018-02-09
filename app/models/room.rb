@@ -1,6 +1,8 @@
 class Room < ActiveRecord::Base
   belongs_to :user
   has_many :photos
+  has_many :reservations 
+
   
   validates :home_type, presence: true
   validates :accomodate, presence: true
@@ -10,8 +12,9 @@ class Room < ActiveRecord::Base
   validates :summary, presence: true, length: {maximum: 600}
   validates :address, presence: true
   validates :price, numericality: {only_integer: true, greather_than: 5}
-  validates :photos, presence: true
   
   geocoded_by :address
+  
+    
   after_validation :geocode, if: :address_changed?
 end
