@@ -6,7 +6,7 @@ before_action :require_same_user, only: [:edit, :update]
 
 
     def index
-        @rooms = Room.all
+        @rooms = current_user.rooms 
     end
     
     def show
@@ -16,6 +16,7 @@ before_action :require_same_user, only: [:edit, :update]
     def edit
         @photos = @room.photos
     end
+    
     
     def update
     

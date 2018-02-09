@@ -10,10 +10,14 @@
 
      </ul>
 
- <br>
-
- <%= link_to 'Voir mon profil', user_path(current_user.id), class: 'btn btn-default wide' %>
-
+    <ul>
+       <li class="button-navigate">
+         <%= link_to 'Voir mon profil', user_path(current_user.id), class: 'btn btn-default wide' %>
+       </li>
+       <li class="button-navigate">
+         <%= link_to 'Mes annonces', user_path(current_user.id), class: 'btn btn-default wide' %>
+     </li>
+    </ul>
  </div>
  
 <div class="col-md-7 text-center"
