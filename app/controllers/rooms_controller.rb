@@ -6,7 +6,7 @@ before_action :require_same_user, only: [:edit, :update]
 
 
     def index
-        @rooms = current_user.rooms 
+        @rooms = Room.all
     end
     
     def show
@@ -17,23 +17,28 @@ before_action :require_same_user, only: [:edit, :update]
         @photos = @room.photos
     end
     
-    def index
-    
-    
-    end
-    
     def update
-        if @room.update(room_params)
+    
+           if @room.update(room_params)
+    
             if params[:images]
-                params[:images].each do |i|
-                   @room.photos.create(image: i)
-                end
+            
+                   params[:images].each do |i|
+            
+                        @room.photos.create(image: i)
+            
+                   end
+            
             end
-            @photos = @rooms.photos
-            redirect_to edit_room_path(@room), notice:"Modification enregistée"
-        else
-            render :edit
-        end
+            
+             redirect_to edit_room_path(@room), notice:"Modification enregistrée..."
+    
+           else
+    
+               render :edit
+    
+           end
+    
     end
     
     def new
