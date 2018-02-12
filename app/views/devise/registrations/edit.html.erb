@@ -15,8 +15,14 @@
          <%= link_to 'Voir mon profil', user_path(current_user.id), class: 'btn btn-default wide' %>
        </li>
        <li class="button-navigate">
-         <%= link_to 'Mes annonces', :controller => "rooms", :action => "index", class: 'btn btn-default wide' %>
-     </li>
+         <%= link_to 'Mes annonces', rooms_path, class: 'btn btn-default wide' %>
+       </li>
+       <li class="button-navigate">
+         <%= link_to "Mes réservations", your_reservations_path, class: 'btn btn-default wide' %>
+       </li>
+       <li class="button-navigate">
+         <%= link_to "Mes voyages", your_trips_path, class: 'btn btn-default wide' %>
+       </li>
     </ul>
  </div>
  
